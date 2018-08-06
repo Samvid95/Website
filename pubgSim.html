@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>AI agents for Pubg simulator</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Samvid Jhaveri</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="projects.html">Projects</a></li>
+								<li><a href="aboutme.html">About Me</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>AI agents created by HTN, playing pubg simulator</h2>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Info</h3>
+									<div class="12u$"><span class="image fit"><img src="images/pubgSim.PNG" alt=""/></span></div>
+									<p>SHOP (Simple Hierarchical Ordered Planner), JSHOP, and SHOP2 are domain-idependent automated-planning systems. They are based on ordered task decomposition, which is a type of Hierarchical Task Network (HTN) planning.</p>
+
+									<p>In HTN planning, the planning system begins with an initial state-of-the-world and with the objective of creating a plan to perform a set of tasks (abstract representations of things that need to be done). HTN planning is done by problem reduction: the planner recursively decomposes tasks into subtasks, stopping when it reaches primitive tasks that can be performed directly by planning operators. In order to tell the planner how to decompose nonprimitive tasks into subtasks, it needs to have a set of methods, where each method is a schema for decomposing a particular kind of task into a set of subtasks (provided that some set of preconditions is satisfied). For each task, there may be more than one applicable method, and thus more than one way to decompose the task into subtasks. The planner may have to try several of these alternative decompositions before finding one that is solvable at a lower level. Unlike classical planning, HTN planning is Turing-complete.</p>
+
+									<p> As a part of the implementation we have decided to use a larger scope and create an agent that can be extended to a more complicated use case. So, we have decided to create an AI agent for Player Unknown’s battleground which is a popular battle royal game where you play with 100 other players and you are dropped on an island where you scavenge different houses in order to find the weapons to fight and last person standing wins. Our planner has 2 AI agents which goes around from city to city in order to find guns and ammo for those guns. If they meet somewhere in the middle while scavenging they will fight with each other and winner of that brawl is defined by the gun power and number of ammo the player has. If they don’t meet while scavenging then both the agents will move to same location where they will fight but when this condition arrives both the agents has a great chance that they have guns and ammo loaded. </p>
+									
+									<p> As you can see from the description this scope is greater then we have anticipated and we had a limited time to extend this but this project can be increased to great complexity and have smarter agents. </p>
+									
+									<h3 class="major">Collaborators</h3>
+									<p>Raquel Robinson</p>
+									<h3 class="major">Technology used</h3>
+									<p>JSHOP2, AI</p>
+									
+
+
+								</div>
+							</div>
+
+					</section>
+
+				
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

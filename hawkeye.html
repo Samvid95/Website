@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Hawkeye</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Samvid Jhaveri</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="projects.html">Projects</a></li>
+								<li><a href="aboutme.html">About Me</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Hawkeye (Computer Vision)</h2>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<h3 class="major">Info</h3>
+									<p>
+									In this modern era, the overlap of technology and sports is at its peak. The advent of technology makes the sports and entertainment experience better day-to-day. One of the concerns in modern sports like Football, Cricket, Tennis, etc is the possibility of human error. One of the most common human errors is that tracking of the ball and measuring its trajectory to provide proper referral decisions. In our project we plan to mitigate this errors using computer vision techniques. </p>
+									<p>The objective of the project is to track the movement of ball and predict their trajectory. This technique is known as HawkEye. This technique is implemented in this project using computer vision techniques like Optical Flow using Kalman Filter Path prediction. In addition, we also calculate and display the Optical Flow vector field results in this project. For tracking the object or ball we used HSV color detection for the green color ball detection. Furthermore, we used input videos to perform the experiment. Finally, the result videos are also provided along with this report.
+									</p>	
+									<div class="row uniform">	
+									<div class="12u$"><span class="image fit"><img src="images/cv1.png" alt="" /></span></div>
+									</div>	
+									<br/><br/>
+									<b>Kalman Filter </b>
+									<p> Once the green ball is detected and tracked, we have a measurement of its current detection. Kalman filter was implemented to predict/estimate the next position and correct based on its current state. Kalman filter works in two steps: PREDICTION and UPDATE. The PREDICTION step allows to predict the position of the object knowing its history, the speed of its movements and knowing the equations that identify its movements. The PREDICTION is corrected every time a measure of the state of the object is available, this correction makes the UPDATE step. Unfortunately, the measure is not perfect, each measure has errors, so PREDICTION and UPDATE are weighted using information about measure and prediction errors. We used the OpenCV implementation of Kalman Filter and its methods. This had all the necessary setup matrices (Transition matrix, Measurement Matrix, Process Noise Covariance etc.) as attributes and the KalmanFilter was corrected with a simple KalmanFilter.correct() where we passed the recent measurements as arguments. We then plotted the trajectory of the ball using detected points and estimated kalman points (at certain time t) where the detection was not available. The code was implemented using C++ and OpenCV libraries.</p>
+									<p>Kalman filter in action:
+									The green rectangle identifies the bounding box of the ball detected during the measure step or detection step. 
+									The red rectangle shows the “estimated state” of the ball, the result of the prediction step of the Kalman Filter. It is really interesting to note how the estimated state overlaps the measured state meanwhile the ball moves linearly, but overall it is interesting to note that the estimation of the state stays valid even if the ball is behind the bottle.
+									The graph the kalman filter provides close to perfect estimations of the trajectories of the ball when displayed along with the detected points. We use both sets of points to get a smooth trajectory of the ball. </p>
+									<p>Major drawbacks of this approach is the detection mechanism, if any other patch that may visibly appear as green patches due to shadows or any other phenomena could be detected as a ball also. Future work would be to improve the ball detection technique and use kalman filter to estimate the trajectory and plot a smooth trajectory.</p>
+									
+									<div class="row uniform">	
+									<div class="6u"><span class="image fit"><img src="images/cv2.png" alt="" /></span></div>
+									<div class="6u$"><span class="image fit"><img src="images/cv3.png" alt="" /></span></div>
+									</div>	
+									<br/><br/>									
+									<h3 class="major">Collaborators</h3>
+									<p>Monil Shah, Tabish Sada</p>
+									<h3 class="major">Technology used</h3>
+									<p>OpenCV, Matlab</p>
+
+								</div>
+							</div>
+
+					</section>
+
+				
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

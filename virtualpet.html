@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Virtual Pet</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Samvid Jhaveri</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="projects.html">Projects</a></li>
+								<li><a href="aboutme.html">About Me</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Virtual Pet as Intimate Ambient Social Affordance</h2>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">								
+									<section>
+										<h3 class="major">Info </h3>
+										<p><a target="_blank" href="https://youtu.be/6yGPjc2SQG4">Check this video here!</a></p>
+										<p> This project contributes:</p>
+										<ul>
+											<li> A prototype of a virtual pet that occupies a shared (networked) VR environment.</li>
+											<li> The first step towards a framework of how to design AI agents that play the role of companions to humans in virtual spaces.</li>
+											
+										</ul>
+										<p> The goal of this project was to create a virtual pet in a shared VR environment to encourage prosocial interaction, both person-to-person and person-to-pet. Our eventual long-term goal is for this agent to be added as one component of a larger existing social VR environment, where we can test this AI agent in different social settings. Of particular interest to us is the role that such an agent might play in mediating intimate ambient activity, such as social interaction between friends and family members. As such, our focus is on the presence of an AI agent during intimate ambient interaction and how this will affect the emergent social dynamics in such a setting. </p>
+										<p> There have been many prior attempts to create virtual pets, but most of these attempts have been focused on replacing or competing with biological pets, and all of these applications have been created with screen-based interfaces in mind. Our agent instead resides within a shared (or “multiplayer”) virtual reality environment, where users have 6 degrees of freedom and can interact with the environment freely. Our project adds to this environment an AI agent with an anthropomorphic (or, perhaps more precisely, a “zoomorphic”) interface, intended primarily to provoke conversation or social interaction between multiple human participants in the virtual space through its behaviors. In addition, our agent functions as a companion to the space’s human inhabitants, with interactions such as petting being specifically designed in to the agent’s behavior: the virtual creature will both be aware of these actions and have the ability to appropriately respond.</p>
+										<p> We also used this project as an opportunity to explore alternative ways of conceptualizing the relationship between humans and AI. In particular, because the project explicitly casts an AI agent in a role that would normally be taken up by a biological pet (such as a cat or dog), it benefits significantly from engaging with Donna Haraway’s notion of the “companion species” and how AI might play the role of a companion species to humanity going forward.</p>
+										<section>
+										<div class="6u"><span class="image fit"><img src="images/VP1.PNG" alt="" /></span></div>
+										<div class="6u"><span class="image fit"><img src="images/VP2.PNG" alt="" /></span></div>
+										</section>
+										<p> The pet’s behavior is managed by a state machine. Transitions between states are regulated by numerical “needs” ranging from 0-100. At any given moment, the pet is in one of four different states: Wary, Hungry, Curious and Affectionate.</p>
+										<p> Initially, the pet starts out in the Wary state. In this state, it will attempt to keep its distance from the player, moving away from the player to preserve this distance if the player attempts to approach it. “Aggressive” actions from the player (such as moving too quickly) will increase the pet’s wariness, causing it to remain in the Wary state for a longer period of time. If the player behaves non-aggressively,  however, wariness will gradually decrease. At the same time, the pet’s other needs (hunger and curiosity) are constantly on the rise. Once one of these other needs becomes more pressing than wariness, the pet will then move from the Wary state into either the Hungry or Curious state as appropriate.</p>
+										<p> If the pet becomes Hungry, it will move towards the food dish and start eating its food. While eating, to signal this behavior to the player, the pet will continuously move its head up and down. Eating will both decrease the pet’s hunger need and make the pet more curious to explore the virtual environment.</p>
+										<p> If the pet becomes Curious, it will move towards the player and start jumping around them in order to catch their attention. This is the cue for the player to pat the pet. This is where the virtual reality shows its own idea where the way to pat the animal makes a lot of difference. For example, if you pat gently around its body, it will move towards the Affectionate state. On the other hand, if you behave rudely with the pet by putting your hand inside it, it will become angry and scared, moving back to the Wary state.</p>
+										<p> In the Affectionate state, the pet will approach the player and sit at the player’s legs to show its love. For a little while, the pet will remain at rest at the player’s feet. At the same time, however, the pet’s own biological clock is also in progress, so after a little while it will become Hungry and potentially shift states on its own. In addition, while the pet is resting, any sudden movement from the player will scare the pet. For example, if the player moves both of their hands very rapidly, the pet will become scared of the player’s behavior and return to the Wary state.</p>
+									</section>
+									<section>
+										<h3 class="major">Collaborators </h3>
+										<p> Max Kreminski </p>
+										<h3 class="major"> Technology used</h3>
+										<p> Unity, VR, C# </p>
+										<h3 class="major"> Achievement </h3>
+										<p> Experimentation with the Alien presence of an AI agent in the VR reality  </p>
+									</section>
+								</div>
+							</div>
+
+					</section>
+
+				
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
